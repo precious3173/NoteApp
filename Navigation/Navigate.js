@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Image, TextInput} from 'react-native'
+import { StyleSheet, Text, View , Image, TextInput, Pressable, Button} from 'react-native'
 import React from 'react'
 
 const Navigate = () => {
@@ -17,12 +17,21 @@ source = {require('./assets/note.png')}
 style= {styles.imageArrange}
 />
 
-<View>
+<Pressable>
+<View style={styles.getStartedText}>
 
-<Text style={styles.getStartedText}>
-    Get Started
-</Text>
+<Button
+
+title = "Get Started"
+color="#841584"
+padding = {10}
+margin = {30}
+
+/>
+
 </View>
+</Pressable>
+
 </View>
     </View>
   )
@@ -35,7 +44,8 @@ const styles = StyleSheet.create({
     navigateContainer:{
         width:"100%",
         height: "100%",
-        alignItems: "center"
+        alignItems: "center", 
+      justifyContent: "space-evenly"
      
 
     },
@@ -43,8 +53,10 @@ const styles = StyleSheet.create({
 
         width: 50,
         height:50,
+        marginStart: 30,
         padding:50,
-        alignContent: "center"
+        alignContent: "center", 
+        marginEnd:30
     
       },
     
@@ -53,7 +65,9 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 18,
         marginTop: 10,
-        marginBottom: 10
+        marginBottom: 10,
+        marginStart:30,
+        marginEnd:30
         
       },
       getStartedText:{
@@ -62,9 +76,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginTop: 50,
         marginBottom: 20,
-       paddingRight:20,
-       paddingLeft:20,
-        backgroundColor: "red"
+   
+       
         
       },
     
