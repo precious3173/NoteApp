@@ -1,14 +1,15 @@
 import { StyleSheet, Text, View , Image, TextInput, Pressable, Button} from 'react-native'
 import React from 'react'
+import { NavScreen } from '../Constant/Constant'
 
-const Navigate = () => {
+const Navigate = ({onExit}) => {
     
   return (
     <View style = {styles.navigateContainer}>
       <View>
 
       <Text style= {styles.textColor}>
-  My NotePad
+  My NotePad, Time to make a difference
   
 </Text>
 <Image
@@ -26,6 +27,7 @@ title = "Get Started"
 color="#841584"
 padding = {10}
 margin = {30}
+onPress={() => onExit(NavScreen.addnote)}
 
 />
 
